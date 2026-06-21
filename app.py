@@ -1,1 +1,9 @@
-return "Hello, I'm Chakri - this is build 2, automated from GitHub"
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, I'm Chakri - this is build 2, automated from GitHub"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
